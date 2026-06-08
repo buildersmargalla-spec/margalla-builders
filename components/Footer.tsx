@@ -50,8 +50,8 @@ export default function Footer() {
 
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
               {[
-                { icon: "📞", text: "+92 309 9207186" },
-                { icon: "✉️", text: "info@margallabuilders.pk" },
+                { icon: "📞", text: "+92 300 5081989" },
+                { icon: "✉️", text: "info@margallabuilders.com" },
                 { icon: "📍", text: "F-7/1, Islamabad, Pakistan" },
               ].map((c, i) => (
                 <div key={i} style={{

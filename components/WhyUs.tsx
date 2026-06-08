@@ -139,8 +139,8 @@ export default function WhyUs() {
           {/* Contact Details */}
           <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
             {[
-              { icon: "📞", text: "+92 309 9207186" },
-              { icon: "✉️", text: "info@margallabuilders.pk" },
+              { icon: "📞", text: "+92 300 5081989" },
+              { icon: "✉️", text: "info@margallabuilders.com" },
               { icon: "📍", text: "Plot 14, Street 22, F-7/1, Islamabad" },
             ].map((c, i) => (
               <div key={i} style={{

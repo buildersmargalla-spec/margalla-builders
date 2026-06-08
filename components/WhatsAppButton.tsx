@@ -2,8 +2,8 @@
 
 export default function WhatsAppButton() {
   return (
-    <a
-      href="https://wa.me/923099207186"
+    
+      href="https://wa.me/923005081989"
       target="_blank"
       rel="noopener noreferrer"
       style={{
@@ -23,8 +23,8 @@ export default function WhatsAppButton() {
         textDecoration: "none",
         transition: "transform 0.2s ease",
       }}
-      onMouseEnter={e => e.currentTarget.style.transform = "scale(1.1)"}
-      onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
+      onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.1)")}
+      onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
     >
       💬
     </a>

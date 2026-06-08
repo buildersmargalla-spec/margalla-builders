@@ -95,8 +95,8 @@ export default function Contact() {
           <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
             {[
               { icon: "📍", label: "Head Office", value: "Plot 14, Street 22, F-7/1, Islamabad" },
-              { icon: "📞", label: "Phone", value: "+92 309 9207186" },
-              { icon: "✉️", label: "Email", value: "info@margallabuilders.pk" },
+              { icon: "📞", label: "Phone", value: "+92 300 5081989" },
+              { icon: "✉️", label: "Email", value: "info@margallabuilders.com" },
               { icon: "🕐", label: "Office Hours", value: "Mon–Sat: 9:00 AM – 6:00 PM" },
             ].map((c, i) => (
               <div key={i} className="reveal" style={{
@@ -150,7 +150,6 @@ export default function Contact() {
               }}>Send Us a Message</h3>
 
               <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-                {/* Name + Phone */}
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
                   <div>
                     <label style={{ fontSize: 11, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--muted)", display: "block", marginBottom: 6 }}>Full Name *</label>
@@ -176,7 +175,6 @@ export default function Contact() {
                   </div>
                 </div>
 
-                {/* Email */}
                 <div>
                   <label style={{ fontSize: 11, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--muted)", display: "block", marginBottom: 6 }}>Email *</label>
                   <input
@@ -189,7 +187,6 @@ export default function Contact() {
                   />
                 </div>
 
-                {/* Interest */}
                 <div>
                   <label style={{ fontSize: 11, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--muted)", display: "block", marginBottom: 6 }}>I'm Interested In</label>
                   <select
@@ -208,7 +205,6 @@ export default function Contact() {
                   </select>
                 </div>
 
-                {/* Budget */}
                 <div>
                   <label style={{ fontSize: 11, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--muted)", display: "block", marginBottom: 6 }}>Budget Range</label>
                   <select
@@ -227,7 +223,6 @@ export default function Contact() {
                   </select>
                 </div>
 
-                {/* Message */}
                 <div>
                   <label style={{ fontSize: 11, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--muted)", display: "block", marginBottom: 6 }}>Message</label>
                   <textarea
@@ -241,7 +236,6 @@ export default function Contact() {
                   />
                 </div>
 
-                {/* Submit */}
                 <button
                   onClick={handleSubmit}
                   style={{
