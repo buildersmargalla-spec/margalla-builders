@@ -24,7 +24,7 @@ export default function WhyUs() {
 
   const features = [
     { num: "01", title: "SECP & CDA Registered", desc: "Fully registered and compliant with all regulatory bodies in Pakistan." },
-    { num: "02", title: "19+ Years of Excellence", desc: "Two decades of delivering quality projects across Islamabad and Rawalpindi." },
+    { num: "02", title: "3+ Years of Excellence", desc: "Delivering quality projects across Islamabad and Rawalpindi." },
     { num: "03", title: "Transparent Contracts", desc: "Clear pricing, no hidden charges — every term documented and explained." },
     { num: "04", title: "In-House Engineering", desc: "Our own team of certified engineers ensures quality at every stage." },
     { num: "05", title: "Post-Handover Support", desc: "Dedicated after-sales team available for 2 years post completion." },
@@ -47,7 +47,6 @@ export default function WhyUs() {
         gap: 80, alignItems: "start",
       }}>
 
-        {/* Left — Features */}
         <div>
           <div className="reveal" style={{ ...revealStyle, display: "flex", alignItems: "center", gap: 12, marginBottom: 20 }}>
             <div style={{ width: 32, height: 1, background: "var(--gold2)" }} />
@@ -92,7 +91,6 @@ export default function WhyUs() {
           ))}
         </div>
 
-        {/* Right — CTA Box */}
         <div className="reveal" style={{
           ...revealStyle,
           background: "var(--stone)",
@@ -136,7 +134,6 @@ export default function WhyUs() {
             onMouseLeave={e => e.currentTarget.style.background = "var(--gold)"}
           >Schedule a Consultation</a>
 
-          {/* Contact Details */}
           <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
             {[
               { icon: "📞", text: "+92 300 5081989" },

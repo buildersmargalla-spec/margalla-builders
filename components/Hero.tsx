@@ -17,9 +17,9 @@ export default function Hero() {
   }, []);
 
   const stats = [
-    { num: "19+", label: "Years Experience" },
-    { num: "120+", label: "Projects Completed" },
-    { num: "2,500+", label: "Families Served" },
+    { num: "3+", label: "Years Experience" },
+    { num: "25+", label: "Projects Completed" },
+    { num: "500+", label: "Families Served" },
     { num: "100%", label: "On-Time Delivery" },
   ];
 
@@ -34,19 +34,14 @@ export default function Hero() {
       position: "relative",
       overflow: "hidden",
     }}>
-      {/* Background Pattern */}
       <div style={{
         position: "absolute", inset: 0,
         backgroundImage: "repeating-linear-gradient(45deg, rgba(107,122,42,0.04) 0px, rgba(107,122,42,0.04) 1px, transparent 1px, transparent 60px)",
         pointerEvents: "none",
       }} />
 
-      {/* Content */}
       <div ref={ref} style={{ maxWidth: 900, position: "relative", zIndex: 1 }}>
-        {/* Eyebrow */}
-        <div style={{
-          display: "flex", alignItems: "center", gap: 12, marginBottom: 28,
-        }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 28 }}>
           <div style={{ width: 40, height: 1, background: "var(--gold2)" }} />
           <span style={{
             color: "var(--gold2)", fontSize: 12, letterSpacing: "0.2em",
@@ -54,39 +49,31 @@ export default function Hero() {
           }}>Islamabad's Premier Developers</span>
         </div>
 
-        {/* Heading */}
         <h1 style={{
           fontFamily: "var(--font-cormorant)",
           fontSize: "clamp(48px, 7vw, 92px)",
-          fontWeight: 300,
-          color: "#F4F7EE",
-          lineHeight: 1.05,
-          marginBottom: 28,
-          letterSpacing: "-0.02em",
+          fontWeight: 300, color: "#F4F7EE",
+          lineHeight: 1.05, marginBottom: 28, letterSpacing: "-0.02em",
         }}>
           Building Islamabad's<br />
           <em style={{ color: "var(--gold2)", fontStyle: "italic" }}>Tomorrow</em>
         </h1>
 
-        {/* Location */}
         <div style={{
           color: "rgba(244,247,238,0.45)", fontSize: 11,
-          letterSpacing: "0.25em", textTransform: "uppercase",
-          marginBottom: 24,
+          letterSpacing: "0.25em", textTransform: "uppercase", marginBottom: 24,
         }}>
           Margalla Builders & Developers · Islamabad, Pakistan
         </div>
 
-        {/* Description */}
         <p style={{
           color: "rgba(244,247,238,0.65)", fontSize: 16,
           lineHeight: 1.75, maxWidth: 520, marginBottom: 44,
           fontFamily: "var(--font-outfit)",
         }}>
-          Since 2005, we have been crafting exceptional residential and commercial properties across Islamabad — where quality, trust, and timely delivery define every project.
+          Since 2022, we have been crafting exceptional residential and commercial properties across Islamabad — where quality, trust, and timely delivery define every project.
         </p>
 
-        {/* Buttons */}
         <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
           <a href="#projects" style={{
             background: "var(--gold)", color: "#fff",
@@ -113,7 +100,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Stats */}
       <div style={{
         display: "flex", gap: 0, marginTop: 80,
         borderTop: "1px solid rgba(107,122,42,0.2)",
@@ -129,13 +115,11 @@ export default function Hero() {
           }}>
             <div style={{
               fontFamily: "var(--font-cormorant)",
-              fontSize: 42, fontWeight: 300, color: "var(--gold)",
-              lineHeight: 1,
+              fontSize: 42, fontWeight: 300, color: "var(--gold)", lineHeight: 1,
             }}>{s.num}</div>
             <div style={{
               color: "rgba(244,247,238,0.5)", fontSize: 11,
-              letterSpacing: "0.15em", textTransform: "uppercase",
-              marginTop: 6,
+              letterSpacing: "0.15em", textTransform: "uppercase", marginTop: 6,
             }}>{s.label}</div>
           </div>
         ))}

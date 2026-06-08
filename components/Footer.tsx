@@ -14,14 +14,11 @@ export default function Footer() {
       padding: "72px 48px 32px",
     }}>
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-
-        {/* Top Grid */}
         <div style={{
           display: "grid",
           gridTemplateColumns: "1.5fr 1fr 1fr 1fr",
           gap: 48, marginBottom: 56,
         }}>
-          {/* Brand */}
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 20 }}>
               <div style={{
@@ -37,7 +34,7 @@ export default function Footer() {
                 <div style={{
                   color: "var(--gold)", fontSize: 9,
                   letterSpacing: "0.15em", textTransform: "uppercase",
-                }}>Islamabad · Est. 2005</div>
+                }}>Islamabad · Est. 2022</div>
               </div>
             </div>
 
@@ -45,7 +42,7 @@ export default function Footer() {
               color: "rgba(244,247,238,0.5)",
               fontSize: 13, lineHeight: 1.8, marginBottom: 24, maxWidth: 260,
             }}>
-              Islamabad's premier real estate developer since 2005. Building quality homes and commercial spaces with trust and integrity.
+              Islamabad's premier real estate developer since 2022. Building quality homes and commercial spaces with trust and integrity.
             </p>
 
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
@@ -65,7 +62,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Link Columns */}
           {Object.entries(links).map(([title, items]) => (
             <div key={title}>
               <h4 style={{
@@ -89,10 +85,8 @@ export default function Footer() {
           ))}
         </div>
 
-        {/* Divider */}
         <div style={{ height: 1, background: "rgba(107,122,42,0.2)", marginBottom: 28 }} />
 
-        {/* Bottom Bar */}
         <div style={{
           display: "flex", justifyContent: "space-between",
           alignItems: "center", flexWrap: "wrap", gap: 12,

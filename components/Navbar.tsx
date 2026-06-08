@@ -35,7 +35,7 @@ export default function Navbar() {
             Margalla Builders
           </div>
           <div style={{ color: "var(--gold)", fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase" }}>
-            Islamabad · Est. 2005
+            Islamabad · Est. 2022
           </div>
         </div>
       </div>

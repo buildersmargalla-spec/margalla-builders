@@ -69,7 +69,7 @@ export default function About() {
               <div style={{
                 fontFamily: "var(--font-cormorant)",
                 fontSize: 22, color: "#F4F7EE", fontWeight: 400, marginTop: 4,
-              }}>Building Excellence Since 2005</div>
+              }}>Building Excellence Since 2022</div>
             </div>
           </div>
           {/* Gold accent box */}
@@ -81,7 +81,7 @@ export default function About() {
             <div style={{
               fontFamily: "var(--font-cormorant)",
               fontSize: 36, fontWeight: 600, color: "#fff", lineHeight: 1,
-            }}>2005</div>
+            }}>2022</div>
             <div style={{
               fontSize: 10, color: "rgba(255,255,255,0.8)",
               letterSpacing: "0.15em", textTransform: "uppercase", marginTop: 4,
@@ -91,7 +91,6 @@ export default function About() {
 
         {/* Right — Content */}
         <div>
-          {/* Eyebrow */}
           <div className="reveal" style={{ ...revealStyle, display: "flex", alignItems: "center", gap: 12, marginBottom: 20 }}>
             <div style={{ width: 32, height: 1, background: "var(--gold2)" }} />
             <span style={{
@@ -111,7 +110,6 @@ export default function About() {
             <em style={{ color: "var(--gold)", fontStyle: "italic" }}>Trusted Builders</em>
           </h2>
 
-          {/* Gold divider */}
           <div className="reveal" style={{
             ...revealStyle,
             width: 48, height: 2, background: "var(--gold)",
@@ -123,7 +121,7 @@ export default function About() {
             color: "var(--muted)", fontSize: 15, lineHeight: 1.8,
             marginBottom: 16,
           }}>
-            Margalla Builders & Developers has been Islamabad's leading real estate developer since 2005. Registered with SECP and compliant with CDA regulations, we have delivered over 120 projects across the capital.
+            Margalla Builders & Developers has been Islamabad's leading real estate developer since 2022. Registered with SECP and compliant with CDA regulations, we have delivered over 25 projects across the capital.
           </p>
 
           <p className="reveal" style={{
