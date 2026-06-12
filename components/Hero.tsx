@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 
 export default function Hero() {
   const ref = useRef<HTMLDivElement>(null);
@@ -34,19 +35,37 @@ export default function Hero() {
       position: "relative",
       overflow: "hidden",
     }}>
+
+      {/* BACKGROUND IMAGE */}
+      <div style={{ position: "absolute", inset: 0, zIndex: 0 }}>
+        <Image
+          src="/hero.jpg"
+          alt="Islamabad skyline"
+          fill
+          style={{ objectFit: "cover", objectPosition: "center" }}
+          priority
+        />
+        {/* Dark overlay */}
+        <div style={{
+          position: "absolute", inset: 0,
+          background: "rgba(26,32,16,0.75)",
+        }} />
+      </div>
+
+      {/* Pattern overlay */}
       <div style={{
-        position: "absolute", inset: 0,
+        position: "absolute", inset: 0, zIndex: 1,
         backgroundImage: "repeating-linear-gradient(45deg, rgba(107,122,42,0.04) 0px, rgba(107,122,42,0.04) 1px, transparent 1px, transparent 60px)",
         pointerEvents: "none",
       }} />
 
-      <div ref={ref} style={{ maxWidth: 900, position: "relative", zIndex: 1 }}>
+      <div ref={ref} style={{ maxWidth: 900, position: "relative", zIndex: 2 }}>
         <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 28 }}>
           <div style={{ width: 40, height: 1, background: "var(--gold2)" }} />
           <span style={{
             color: "var(--gold2)", fontSize: 12, letterSpacing: "0.2em",
             textTransform: "uppercase", fontFamily: "var(--font-outfit)",
-          }}>Islamabad's Premier Developers</span>
+          }}>Islamabad&apos;s Premier Developers</span>
         </div>
 
         <h1 style={{
@@ -55,7 +74,7 @@ export default function Hero() {
           fontWeight: 300, color: "#F4F7EE",
           lineHeight: 1.05, marginBottom: 28, letterSpacing: "-0.02em",
         }}>
-          Building Islamabad's<br />
+          Building Islamabad&apos;s<br />
           <em style={{ color: "var(--gold2)", fontStyle: "italic" }}>Tomorrow</em>
         </h1>
 
@@ -63,7 +82,7 @@ export default function Hero() {
           color: "rgba(244,247,238,0.45)", fontSize: 11,
           letterSpacing: "0.25em", textTransform: "uppercase", marginBottom: 24,
         }}>
-          Margalla Builders & Developers · Islamabad, Pakistan
+          Margalla Builders &amp; Developers · Islamabad, Pakistan
         </div>
 
         <p style={{
@@ -104,7 +123,7 @@ export default function Hero() {
         display: "flex", gap: 0, marginTop: 80,
         borderTop: "1px solid rgba(107,122,42,0.2)",
         paddingTop: 40, flexWrap: "wrap",
-        position: "relative", zIndex: 1,
+        position: "relative", zIndex: 2,
       }}>
         {stats.map((s, i) => (
           <div key={i} style={{

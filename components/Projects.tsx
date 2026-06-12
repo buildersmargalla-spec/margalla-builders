@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 
 export default function Projects() {
   const ref = useRef<HTMLDivElement>(null);
@@ -30,7 +31,7 @@ export default function Projects() {
       location: "F-8, Islamabad",
       year: "2023",
       status: "Completed",
-      color: "linear-gradient(135deg, #1A2010 0%, #3A4E28 100%)",
+      image: "/project1.jpg",
       span: true,
     },
     {
@@ -40,7 +41,7 @@ export default function Projects() {
       location: "Blue Area, Islamabad",
       year: "2022",
       status: "Completed",
-      color: "linear-gradient(135deg, #243018 0%, #6B7A2A 100%)",
+      image: "/project2.jpg",
       span: false,
     },
     {
@@ -50,7 +51,7 @@ export default function Projects() {
       location: "Chakri Road, Islamabad",
       year: "2024",
       status: "Ongoing",
-      color: "linear-gradient(135deg, #1A2010 0%, #E07B2A 60%, #3A4E28 100%)",
+      image: "/project3.jpg",
       span: false,
     },
     {
@@ -60,7 +61,7 @@ export default function Projects() {
       location: "DHA Valley, Islamabad",
       year: "2024",
       status: "Ongoing",
-      color: "linear-gradient(135deg, #3A4E28 0%, #243018 100%)",
+      image: "/project4.jpg",
       span: false,
     },
   ];
@@ -72,13 +73,9 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" ref={ref} style={{
-      background: "var(--cream)",
-      padding: "100px 48px",
-    }}>
+    <section id="projects" ref={ref} style={{ background: "var(--cream)", padding: "100px 48px" }}>
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
 
-        {/* Header */}
         <div className="reveal" style={{
           ...revealStyle,
           display: "flex", justifyContent: "space-between",
@@ -88,9 +85,7 @@ export default function Projects() {
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
               <div style={{ width: 32, height: 1, background: "var(--gold2)" }} />
-              <span style={{ color: "var(--gold2)", fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase" }}>
-                Our Work
-              </span>
+              <span style={{ color: "var(--gold2)", fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase" }}>Our Work</span>
             </div>
             <h2 style={{
               fontFamily: "var(--font-cormorant)",
@@ -107,7 +102,6 @@ export default function Projects() {
           }}>All Projects →</a>
         </div>
 
-        {/* Grid */}
         <div style={{
           display: "grid",
           gridTemplateColumns: "repeat(3, 1fr)",
@@ -136,15 +130,19 @@ export default function Projects() {
               {/* Thumbnail */}
               <div style={{
                 height: p.span ? 280 : 200,
-                background: p.color,
                 position: "relative",
                 overflow: "hidden",
               }}>
+                <Image
+                  src={p.image}
+                  alt={p.title}
+                  fill
+                  style={{ objectFit: "cover", objectPosition: "center" }}
+                />
                 <div style={{
                   position: "absolute", inset: 0,
-                  backgroundImage: "repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 30px)",
+                  background: "rgba(26,32,16,0.2)",
                 }} />
-                {/* Status badge */}
                 <div style={{
                   position: "absolute", top: 16, right: 16,
                   background: p.status === "Completed" ? "rgba(107,122,42,0.9)" : "rgba(224,123,42,0.9)",
@@ -155,24 +153,10 @@ export default function Projects() {
 
               {/* Content */}
               <div style={{ padding: "24px" }}>
-                <div style={{
-                  color: "var(--gold2)", fontSize: 10, letterSpacing: "0.2em",
-                  textTransform: "uppercase", marginBottom: 8,
-                }}>{p.tag}</div>
-                <h3 style={{
-                  fontFamily: "var(--font-cormorant)",
-                  fontSize: 22, fontWeight: 600,
-                  color: "var(--text)", marginBottom: 10,
-                }}>{p.title}</h3>
-                <p style={{
-                  color: "var(--muted)", fontSize: 13,
-                  lineHeight: 1.7, marginBottom: 16,
-                }}>{p.desc}</p>
-                <div style={{
-                  display: "flex", gap: 20,
-                  fontSize: 11, color: "var(--muted)",
-                  letterSpacing: "0.1em", textTransform: "uppercase",
-                }}>
+                <div style={{ color: "var(--gold2)", fontSize: 10, letterSpacing: "0.2em", textTransform: "uppercase", marginBottom: 8 }}>{p.tag}</div>
+                <h3 style={{ fontFamily: "var(--font-cormorant)", fontSize: 22, fontWeight: 600, color: "var(--text)", marginBottom: 10 }}>{p.title}</h3>
+                <p style={{ color: "var(--muted)", fontSize: 13, lineHeight: 1.7, marginBottom: 16 }}>{p.desc}</p>
+                <div style={{ display: "flex", gap: 20, fontSize: 11, color: "var(--muted)", letterSpacing: "0.1em", textTransform: "uppercase" }}>
                   <span>📍 {p.location}</span>
                   <span>📅 {p.year}</span>
                 </div>
@@ -185,12 +169,8 @@ export default function Projects() {
       <style>{`
         @media(max-width:900px){
           section#projects { padding: 70px 24px !important; }
-          section#projects > div > div:last-child {
-            grid-template-columns: 1fr !important;
-          }
-          section#projects > div > div:last-child > div {
-            grid-column: auto !important;
-          }
+          section#projects > div > div:last-child { grid-template-columns: 1fr !important; }
+          section#projects > div > div:last-child > div { grid-column: auto !important; }
         }
       `}</style>
     </section>

@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 
 export default function About() {
   const ref = useRef<HTMLDivElement>(null);
@@ -36,34 +37,36 @@ export default function About() {
   };
 
   return (
-    <section id="about" ref={ref} style={{
-      background: "#fff",
-      padding: "100px 48px",
-    }}>
+    <section id="about" ref={ref} style={{ background: "#fff", padding: "100px 48px" }}>
       <div style={{
         maxWidth: 1200, margin: "0 auto",
         display: "grid", gridTemplateColumns: "1fr 1fr",
         gap: 80, alignItems: "center",
       }}>
-        {/* Left — Image Placeholder */}
+
+        {/* Left — Image */}
         <div className="reveal" style={{ ...revealStyle, position: "relative" }}>
           <div style={{
             width: "100%", aspectRatio: "4/5",
-            background: "linear-gradient(135deg, var(--stone) 0%, var(--stone3) 100%)",
             borderRadius: 4, position: "relative", overflow: "hidden",
           }}>
+            <Image
+              src="/about.jpg"
+              alt="Margalla Builders construction"
+              fill
+              style={{ objectFit: "cover", objectPosition: "center" }}
+            />
+            {/* Overlay */}
             <div style={{
               position: "absolute", inset: 0,
-              backgroundImage: "repeating-linear-gradient(45deg, rgba(107,122,42,0.06) 0px, rgba(107,122,42,0.06) 1px, transparent 1px, transparent 40px)",
+              background: "linear-gradient(to top, rgba(26,32,16,0.7) 0%, transparent 60%)",
             }} />
             <div style={{
-              position: "absolute", bottom: 0, left: 0, right: 0,
-              padding: 32,
-              background: "linear-gradient(transparent, rgba(26,32,16,0.9))",
+              position: "absolute", bottom: 0, left: 0, right: 0, padding: 32,
             }}>
               <div style={{
                 fontFamily: "var(--font-cormorant)",
-                fontSize: 14, color: "rgba(244,247,238,0.6)",
+                fontSize: 14, color: "rgba(244,247,238,0.7)",
                 letterSpacing: "0.15em", textTransform: "uppercase",
               }}>Islamabad, Pakistan</div>
               <div style={{
@@ -72,6 +75,7 @@ export default function About() {
               }}>Building Excellence Since 2022</div>
             </div>
           </div>
+
           {/* Gold accent box */}
           <div style={{
             position: "absolute", top: -20, right: -20,
@@ -93,10 +97,7 @@ export default function About() {
         <div>
           <div className="reveal" style={{ ...revealStyle, display: "flex", alignItems: "center", gap: 12, marginBottom: 20 }}>
             <div style={{ width: 32, height: 1, background: "var(--gold2)" }} />
-            <span style={{
-              color: "var(--gold2)", fontSize: 11, letterSpacing: "0.2em",
-              textTransform: "uppercase",
-            }}>Who We Are</span>
+            <span style={{ color: "var(--gold2)", fontSize: 11, letterSpacing: "0.2em", textTransform: "uppercase" }}>Who We Are</span>
           </div>
 
           <h2 className="reveal" style={{
@@ -106,36 +107,21 @@ export default function About() {
             fontWeight: 400, color: "var(--text)",
             lineHeight: 1.1, marginBottom: 20,
           }}>
-            Islamabad's Most<br />
+            Islamabad&apos;s Most<br />
             <em style={{ color: "var(--gold)", fontStyle: "italic" }}>Trusted Builders</em>
           </h2>
 
-          <div className="reveal" style={{
-            ...revealStyle,
-            width: 48, height: 2, background: "var(--gold)",
-            marginBottom: 24,
-          }} />
+          <div className="reveal" style={{ ...revealStyle, width: 48, height: 2, background: "var(--gold)", marginBottom: 24 }} />
 
-          <p className="reveal" style={{
-            ...revealStyle,
-            color: "var(--muted)", fontSize: 15, lineHeight: 1.8,
-            marginBottom: 16,
-          }}>
-            Margalla Builders & Developers has been Islamabad's leading real estate developer since 2022. Registered with SECP and compliant with CDA regulations, we have delivered over 25 projects across the capital.
+          <p className="reveal" style={{ ...revealStyle, color: "var(--muted)", fontSize: 15, lineHeight: 1.8, marginBottom: 16 }}>
+            Margalla Builders &amp; Developers has been Islamabad&apos;s leading real estate developer since 2022. Registered with SECP and compliant with CDA regulations, we have delivered over 25 projects across the capital.
           </p>
 
-          <p className="reveal" style={{
-            ...revealStyle,
-            color: "var(--muted)", fontSize: 15, lineHeight: 1.8,
-            marginBottom: 40,
-          }}>
+          <p className="reveal" style={{ ...revealStyle, color: "var(--muted)", fontSize: 15, lineHeight: 1.8, marginBottom: 40 }}>
             From luxury residential towers to commercial complexes and gated communities — we bring vision, precision, and integrity to every build.
           </p>
 
-          {/* Values Grid */}
-          <div style={{
-            display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16,
-          }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
             {values.map((v, i) => (
               <div key={i} className="reveal" style={{
                 ...revealStyle,
@@ -154,10 +140,7 @@ export default function About() {
                 }}
               >
                 <div style={{ color: "var(--gold)", fontSize: 20, marginBottom: 8 }}>{v.icon}</div>
-                <div style={{
-                  fontFamily: "var(--font-cormorant)",
-                  fontSize: 17, fontWeight: 600, color: "var(--text)", marginBottom: 4,
-                }}>{v.title}</div>
+                <div style={{ fontFamily: "var(--font-cormorant)", fontSize: 17, fontWeight: 600, color: "var(--text)", marginBottom: 4 }}>{v.title}</div>
                 <div style={{ color: "var(--muted)", fontSize: 13, lineHeight: 1.6 }}>{v.desc}</div>
               </div>
             ))}
